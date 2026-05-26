@@ -6,6 +6,7 @@
         {
             //AbstractVehicle av = new AbstractVehicle(); 
             Vehicle v = new Vehicle("Volvo");
+            //v.ProtectedBool = true; 
             //Console.WriteLine(v.Drive(10));
             Car c = new Car("BMW", "E39");
             //Console.WriteLine(c.Drive(15));
