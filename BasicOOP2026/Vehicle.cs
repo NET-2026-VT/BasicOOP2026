@@ -13,7 +13,7 @@ namespace BasicOOP2026
             Brand = brand; 
         }
 
-        public string Drive(int distance)
+        public virtual string Drive(int distance)
         {
             return $"{GetType().Name} drove for {distance} km";
         }
@@ -30,6 +30,11 @@ namespace BasicOOP2026
         public void Stop()
         {
             Console.WriteLine("Car stopped");
+        }
+
+        public override string Drive(int distance)
+        {
+            return $"{base.Drive(distance)} from car";
         }
     }
 }
