@@ -4,7 +4,12 @@
     {
         static void Main(string[] args)
         {
-            Part1();
+            Vehicle v = new Vehicle("Volvo");
+            Console.WriteLine(v.Drive(10));
+            Car c = new Car("BMW", "E39");
+            Console.WriteLine(c.Drive(15));
+            
+            //Part1();
         }
 
         private static void Part1()
