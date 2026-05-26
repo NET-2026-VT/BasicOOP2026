@@ -4,6 +4,12 @@
     {
         static void Main(string[] args)
         {
+            string name = "Kalle";
+            string res = name.AddString("Anka");
+            Console.WriteLine(res);
+
+            Console.ReadKey(); 
+
             //AbstractVehicle av = new AbstractVehicle(); 
             Vehicle v = new Vehicle("Volvo");
             //v.ProtectedBool = true; 
