@@ -8,7 +8,9 @@
             Console.WriteLine(v.Drive(10));
             Car c = new Car("BMW", "E39");
             Console.WriteLine(c.Drive(15));
-            
+            //v.Stop();
+            c.Stop(); 
+
             //Part1();
         }
 
