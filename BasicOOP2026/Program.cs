@@ -5,13 +5,45 @@
         static void Main(string[] args)
         {
             Vehicle v = new Vehicle("Volvo");
-            Console.WriteLine(v.Drive(10));
+            //Console.WriteLine(v.Drive(10));
             Car c = new Car("BMW", "E39");
-            Console.WriteLine(c.Drive(15));
+            //Console.WriteLine(c.Drive(15));
             //v.Stop();
-            c.Stop(); 
+            //c.Stop(); 
+            Saab s = new Saab();
+            //Console.WriteLine(s.Drive(10));
+            //Console.WriteLine(s.SpecialMethod());
+            //v.SpecialMethod();
+            //c.SpecialMethod(); 
 
-            //Part1();
+            List<IDriveable> vehicles = new List<IDriveable>
+            {
+                v,
+                c,
+                s
+            };
+
+            foreach (IDriveable vehicle in vehicles)
+            {
+                Console.WriteLine(vehicle.Drive(50));
+
+                //vehicle.SpecialMethod(); 
+
+                //Unsafe cast
+                //Saab saab = (Saab)vehicle;
+
+                //Saab saab = vehicle as Saab;
+                //if(saab != null)
+
+                //if (vehicle is Saab)
+                //{
+                //    Saab saab = (Saab)vehicle;
+                //    Console.WriteLine(saab.SpecialMethod());
+                //}
+
+                if (vehicle is Saab castedToSaab)
+                    Console.WriteLine(castedToSaab.SpecialMethod());
+            }
         }
 
         private static void Part1()

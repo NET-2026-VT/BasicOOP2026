@@ -37,4 +37,17 @@ namespace BasicOOP2026
             return $"{base.Drive(distance)} from car";
         }
     }
+
+    internal class Saab : Car
+    {
+        public Saab(string model = "900") : base("SAAB", model)
+        {
+
+        }
+
+        public string SpecialMethod()
+        {
+            return "From Saab";
+        }
+    }
 }
