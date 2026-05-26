@@ -4,6 +4,7 @@
     {
         static void Main(string[] args)
         {
+            //AbstractVehicle av = new AbstractVehicle(); 
             Vehicle v = new Vehicle("Volvo");
             //Console.WriteLine(v.Drive(10));
             Car c = new Car("BMW", "E39");
@@ -23,8 +24,16 @@
                 s
             };
 
-            foreach (IDriveable vehicle in vehicles)
+            foreach (AbstractVehicle vehicle in vehicles)
             {
+                Console.WriteLine(vehicle.Drive(50));
+                Console.WriteLine(vehicle.Turn());
+                Console.WriteLine(vehicle.Drive(50));
+                Console.WriteLine(vehicle.Turn());
+                Console.WriteLine(vehicle.Drive(50));
+                Console.WriteLine(vehicle.Turn());
+                Console.WriteLine(vehicle.Drive(50));
+                Console.WriteLine(vehicle.Turn());
                 Console.WriteLine(vehicle.Drive(50));
 
                 //vehicle.SpecialMethod(); 

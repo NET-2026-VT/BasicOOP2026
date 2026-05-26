@@ -6,6 +6,7 @@ namespace BasicOOP2026
 {
     internal interface IDriveable
     {
-        string Drive(int distance); 
+        string Drive(int distance);
+
     }
 }

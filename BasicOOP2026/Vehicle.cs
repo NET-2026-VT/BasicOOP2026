@@ -4,7 +4,18 @@ using System.Text;
 
 namespace BasicOOP2026
 {
-    internal class Vehicle : IDriveable
+    internal abstract class AbstractVehicle : IDriveable
+    {
+        private int fuel = 50;
+        public abstract string Turn();
+        public virtual string Drive(int distance)
+        {
+            fuel -= 5;
+            return $"{GetType().Name} drove for {distance} km {fuel} units of fuel remaining";
+        }
+
+    }
+    internal class Vehicle : AbstractVehicle
     {
         public string Brand { get; set; }
 
@@ -13,9 +24,9 @@ namespace BasicOOP2026
             Brand = brand; 
         }
 
-        public virtual string Drive(int distance)
+        public override string Turn()
         {
-            return $"{GetType().Name} drove for {distance} km";
+            return "Turning"; 
         }
     }
 
